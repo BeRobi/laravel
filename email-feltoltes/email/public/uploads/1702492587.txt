@@ -1,0 +1,37 @@
+class="form-control @error('file') is-invalid @enderror">
+                        @error('file')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+
+   
+
+nquz pmah cbjc erar
+
+1. terminálban = composer create-project laravel/laravel "név"
+2. AB xampp control
+3 .env
+4. DB_DATABASE= név átírás
+5. CD könyvtár
+6. php artisan serve
+7. CD könyvtár
+8. php artisan make:model "név" -m
+9. php artisan migrate:fresh
+10. Task::create(['task_range_id' => 1, 'name' => 'Első HTML oldal létrehozása', 'score' => '2', 'description'=> 'Hozd létre az alap HTML oldalt','education_link'=>'edu.link.hu', 'task_link'=>'feladat.link.hu']);
+11. php artisan make:factory BookFactory --model=Book
+	php artisan make:factory CopyFactory --model=Copy
+
+
+\App\Models\User::factory(10)->create();
+\App\Models\Blog::factory(10)->create();
+
+php artisan db:seed
+php artisan migrate:fresh --seed
+
+ 'name' => fake('hu_HU')->name(),
+            'country' => fake('hu_HU')->country(),
+
+
+Route::get('/api/tasks', [TaskController::class, 'index']);
+Route::get('/api/tasks/{id}', [TaskController::class, 'show']);
+Route::post('/api/tasks', [TaskController::class, 'store']);
+Route::put('/api/tasks/{id}', [TaskController::class, 'update']);
